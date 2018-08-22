@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import logo from './logo.svg';
+// import ReactDOM from 'react-dom';
+// import logo from './logo.svg';
 import './App.css';
 // Importing MATERIAL UI components
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 // Theme configuration
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import teal from '@material-ui/core/colors/teal';
@@ -23,13 +23,10 @@ class App extends Component {
     return (
       <div className="App">
       <MuiThemeProvider theme={theme}>
-        <HeaderDfdb title="Descarga De Base de Datos" classes="{root:'', menuButton:'', flex:''}"></HeaderDfdb>
+        <HeaderDfdb title="Descarga De Base de Datos"></HeaderDfdb>
       <p className="App-intro">
-      To get started, edit <code>src/App.js</code> and save to reload.
+        Datos de los vehículos encontrados
       </p>
-      <Button variant="contained" color="primary">
-        Hello World
-      </Button>
       </MuiThemeProvider>
       </div>
     );
