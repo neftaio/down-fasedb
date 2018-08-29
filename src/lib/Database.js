@@ -1,5 +1,5 @@
 import React from 'react';
-import sqlite3 from 'sqlite3'
+import sqlite3 from 'sqlite3';
 
 class DatabaseManager extends React.Component {
   // constructor(props) {
