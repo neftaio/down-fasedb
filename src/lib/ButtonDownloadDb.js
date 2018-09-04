@@ -5,7 +5,7 @@ import IconButton from '@material-ui/core/IconButton';
 import CloudDownload from '@material-ui/icons/CloudDownload';
 import axios from 'axios';
 import qs from 'qs';
-import Database from './Database';
+// import Database from './Database';
 // Styles for the component
 import './ButtonDownloadDb.css';
 
@@ -33,7 +33,6 @@ class ButtonDownloadDb extends React.Component {
   //  al boton de descarga
   //
   async handleDownload() {
-    Database.hello();
     // Get the authentication token
     let token = await this.dbDownloadStateToken();
     this.authentication_token = token;
