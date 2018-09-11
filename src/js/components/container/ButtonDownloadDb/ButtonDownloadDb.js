@@ -7,7 +7,7 @@ import axios from 'axios';
 import qs from 'qs';
 // import Database from './Database';
 // Styles for the component
-import './ButtonDownloadDb.css';
+import './ButtonDownloadDb.scss';
 
 //
 // COMPONENT CLASS FOR DOWNLOAD DB
@@ -100,46 +100,3 @@ class ButtonDownloadDb extends React.Component {
 
 
   export default ButtonDownloadDb;
-
-
-  // //
-  // // Save all data in database
-  // //
-  // saveInDataBase(data, table) {
-  //   console.log('guardando datos');
-  //   console.log(data);
-  // }
-  //
-  // //
-  // // Download data from api to save in db
-  // //
-  // downloadData(url, token, table, callbacktosavedata) {
-  //   // Define header for request
-  //   var header = {headers: {
-  //     'Accept': '*/*',
-  //     'Content-Type' : 'application/x-www-form-urlencoded',
-  //     'Authorization': 'bearer ' + token,
-  //   }}
-  //   // Get Data
-  //   axios.get(url, header)
-  //   .then(function (response){
-  //     callbacktosavedata(response.data, table)
-  //   })
-  //   .catch(function (error) {
-  //     console.log(error);
-  //   });
-  // }
-  //
-  //
-  // //
-  // // Ejecuta la descarga de la base de datos al momento de obtener
-  // // el toke de autenticación
-  // //
-  // db_download(token_string) {
-  //   if(token_string) {
-  //     // Download the categories
-  //     var url_api = this.baseUlr + 'categoria';
-  //     this.downloadData(url_api, token_string, 'category', this.saveInDataBase);
-  //
-  //   }
-  // }

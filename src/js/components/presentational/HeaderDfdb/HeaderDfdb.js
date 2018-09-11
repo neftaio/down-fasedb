@@ -4,8 +4,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import ButtonDownloadDb from './ButtonDownloadDb';
-import "./HeaderDfdb.css";
+import ButtonDownloadDb from '../../container/ButtonDownloadDb/ButtonDownloadDb';
+import "./HeaderDfdb.scss";
 
 
 class HeaderDfdb extends React.Component {

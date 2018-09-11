@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
-// import ReactDOM from 'react-dom';
-// import logo from './logo.svg';
-import './App.css';
-// Importing MATERIAL UI components
-// import Button from '@material-ui/core/Button';
-// Theme configuration
+import ReactDOM from "react-dom";
+import './AppContainer.scss';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import teal from '@material-ui/core/colors/teal';
 import orange from '@material-ui/core/colors/orange';
-// Importing own components
-import HeaderDfdb from './lib/HeaderDfdb';
+// // Importing own components
+import HeaderDfdb from '../presentational/HeaderDfdb/HeaderDfdb';
 
 const theme = createMuiTheme({
     palette: {
@@ -18,7 +14,7 @@ const theme = createMuiTheme({
     },
 });
 
-class App extends Component {
+class AppContainer extends Component {
   render() {
     return (
       <div className="App">
@@ -29,8 +25,11 @@ class App extends Component {
       </p>
       </MuiThemeProvider>
       </div>
+
     );
   }
 }
 
-export default App;
+export default AppContainer;
+const wrapper = document.getElementById("app");
+wrapper ? ReactDOM.render(<AppContainer />, wrapper) : false;
