@@ -5,7 +5,8 @@ import IconButton from '@material-ui/core/IconButton';
 import CloudDownload from '@material-ui/icons/CloudDownload';
 import axios from 'axios';
 import qs from 'qs';
-// import Database from './Database';
+// Impoprting database models
+import {Category}  from '../../../../db_models';
 // Styles for the component
 import './ButtonDownloadDb.scss';
 
@@ -38,7 +39,8 @@ class ButtonDownloadDb extends React.Component {
     this.authentication_token = token;
     // Download all categories
     console.log(this.authentication_token);
-    this.getCategories(this.authentication_token);
+    let cats = await this.getCategories(this.authentication_token);
+    console.log(cats);
   }
 
 
@@ -76,7 +78,8 @@ class ButtonDownloadDb extends React.Component {
       // Get Categories from api
       let resp = await axios.get(url, header);
       let response =  await resp.data;
-      console.log(response);
+      return response;
+      // console.log(response);
     }
 
 
